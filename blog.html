@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Greenland Shark</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="glass-container">
+    <header data-animate>
+        <div class="site-branding">
+            <img src="images/logo.png" alt="Greenland Shark logo" class="logo" />
+            <h1>Greenland Shark</h1>
+          </div>          
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="blog.html" class="active">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro-card" data-animate>
+        <h2>Blog</h2>
+        <p>
+          Thoughts, reviews, short stories, and fragments from the deep.
+        </p>
+      </section>
+
+      <section class="blog-grid about" data-animate>
+        <a href="posts/emperor-of-sand.html" class="blog-card">
+          <img src="images/mastodon-thumb.jpg" alt="Mastodon – Emperor of Sand" />
+          <div class="blog-card-text">
+            <h3>Mastodon – <em>Emperor of Sand</em></h3>
+            <p>A scorching and sorrowful album, and one of their most emotionally resonant releases.</p>
+          </div>
+        </a>
+      </section>
+
+      <section class="spacer-section" data-animate>
+        <p>More writing coming soon...</p>
+      </section>
+    </main>
+
+    <footer data-animate>
+      <p>&copy; 2025 Greenland Shark. <em>Still waters write deep stories.</em></p>
+    </footer>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
