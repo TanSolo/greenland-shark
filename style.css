@@ -94,7 +94,7 @@
   }
   
   .site-branding .logo {
-    width: 120px; /* Make it bigger */
+    width: 256px; /* Make it bigger */
     height: auto;
     position: absolute;
     top: -40px;     /* Move it upward */
@@ -104,8 +104,8 @@
   }
   
   .logo {
-    width: 48px;
-    height: 48px;
+    width: 256px;
+    height: 256px;
     object-fit: contain;
     border-radius: 50%;
     box-shadow: 0 0 12px rgba(143, 243, 255, 0.15);
