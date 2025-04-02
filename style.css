@@ -85,31 +85,19 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-left: 70px; /* Shifts title away from logo */
-  }  
-  
-  .site-branding .logo {
-    width: 100px;
-    height: auto;
-    position: absolute;
-    top: -36px;
-    left: -36px;
-    transform: none;
-    z-index: 10;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
-    border-radius: 50%;
+    padding-left: 90px; /* This shifts text right to make room for logo */
   }
   
-
-  .logo {
+  .site-branding .logo {
     position: absolute;
-    top: -45px;
-    left: -45px;
-    width: 128px;   
+    top: -45px;         /* adjust vertical position */
+    left: -45px;        /* adjust horizontal position */
+    width: 128px;        /* 🔧 control size here */
     height: 128px;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
     z-index: 10;
+    box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
   }
   
   /* Main content */
