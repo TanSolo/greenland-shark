@@ -94,14 +94,15 @@
   }
   
   .site-branding .logo {
-    width: 256px; /* Make it bigger */
+    width: 120px;              /* Make it larger */
     height: auto;
     position: absolute;
-    top: -40px;     /* Move it upward */
-    left: -40px;    /* Optional: move slightly left */
-    z-index: 5;     /* Ensure it's above the container */
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
-  }
+    top: -40px;                /* Move upward out of container */
+    left: -40px;               /* Optionally shift left */
+    z-index: 5;                /* Ensure it layers above */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    border-radius: 50%;        /* Keep it rounded */
+  }  
   
   .logo {
     width: 256px;
