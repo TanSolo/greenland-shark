@@ -85,6 +85,23 @@
     align-items: center;
     gap: 1rem;
   }
+  .site-branding {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .site-branding .logo {
+    width: 120px; /* Make it bigger */
+    height: auto;
+    position: absolute;
+    top: -40px;     /* Move it upward */
+    left: -40px;    /* Optional: move slightly left */
+    z-index: 5;     /* Ensure it's above the container */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  }
   
   .logo {
     width: 48px;
