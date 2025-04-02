@@ -27,7 +27,7 @@
         <h1>Greenland Shark</h1>
       </div>      
       <nav>
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="career.html">Career</a>
         <a href="blog.html">Blog</a>
       </nav>
@@ -61,7 +61,15 @@
       <p>&copy; 2025 Greenland Shark. <em>Quiet but ancient.</em></p>
     </footer>
   </div>
-
+  <div class="sticky-topbar">
+    <img src="images/logo.png" alt="Greenland Shark logo" class="sticky-logo" />
+    <nav>
+      <a href="/greenland-shark/index.html">Home</a>
+      <a href="/greenland-shark/career.html">Career</a>
+      <a href="/greenland-shark/blog.html">Blog</a>
+    </nav>
+  </div>
+  
   <div class="background-overlay"></div>
 
   <script>
@@ -79,5 +87,16 @@
 
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
   </script>
+  <script>
+    const topbar = document.querySelector('.sticky-topbar');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topbar.classList.add('show');
+      } else {
+        topbar.classList.remove('show');
+      }
+    });
+  </script>  
 </body>
 </html>

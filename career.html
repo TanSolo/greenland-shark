@@ -27,9 +27,9 @@
         <h1>Greenland Shark</h1>
       </div>          
       <nav>
-        <a href="index.html">Home</a>
-        <a href="career.html" class="active">Career</a>
-        <a href="blog.html">Blog</a>
+        <a href="./index.html">Home</a>
+        <a href="./career.html" class="active">Career</a>
+        <a href="./blog.html">Blog</a>
       </nav>
     </header>
 
@@ -94,5 +94,16 @@
 
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
   </script>
+  <script>
+    const topbar = document.querySelector('.sticky-topbar');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topbar.classList.add('show');
+      } else {
+        topbar.classList.remove('show');
+      }
+    });
+  </script>  
 </body>
 </html>
