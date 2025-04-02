@@ -10,96 +10,10 @@
 <body>
   <div class="glass-container">
     <header data-animate>
-        <div class="site-branding">
-            <img src="images/logo.png" alt="Greenland Shark logo" class="logo" />
-            <h1>Greenland Shark</h1>
-          </div>          
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="career.html" class="active">Career</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="intro-card" data-animate>
-        <h2>Career</h2>
-        <p>
-          This page includes my CV, cover letter, project portfolio, and certificates. It reflects my growth, focus, and creative energy across different domains.
-        </p>
-      </section>
-
-      <section class="about" data-animate>
-        <h3>Documents</h3>
-        <ul class="career-list">
-          <li><a href="assets/cv.pdf" target="_blank">📄 Download CV</a></li>
-          <li><a href="assets/cover-letter.pdf" target="_blank">📝 Cover Letter</a></li>
-        </ul>
-      </section>
-
-      <section class="about" data-animate>
-        <h3>Projects</h3>
-        <ul class="career-list">
-          <li>
-            <strong>🧠 Neural Synth</strong> — A virtual synth powered by neural nets. <br>
-            <a href="#">View project</a>
-          </li>
-          <li>
-            <strong>📡 Live Audio Streamer</strong> — Low-latency streaming over WebRTC.<br>
-            <a href="#">View project</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="about" data-animate>
-        <h3>Certificates</h3>
-        <ul class="career-list">
-          <li>🎓 Deep Learning Specialization — Coursera</li>
-          <li>🛡 Cybersecurity Fundamentals — IBM</li>
-        </ul>
-      </section>
-
-      <section class="spacer-section" data-animate>
-        <p>More updates coming soon...</p>
-      </section>
-    </main>
-
-    <footer data-animate>
-      <p>&copy; 2025 Greenland Shark. <em>Resilience runs deep.</em></p>
-    </footer>
-  </div>
-
-  <div class="background-overlay"></div>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Career | Greenland Shark</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div class="glass-container">
-    <header data-animate>
-        <div class="site-branding">
-            <img src="images/logo.png" alt="Greenland Shark logo" class="logo" />
-            <h1>Greenland Shark</h1>
-          </div>          
+      <div class="site-branding">
+        <img src="images/logo.png" alt="Greenland Shark logo" class="logo" />
+        <h1>Greenland Shark</h1>
+      </div>          
       <nav>
         <a href="index.html">Home</a>
         <a href="career.html" class="active">Career</a>
