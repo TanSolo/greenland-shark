@@ -673,12 +673,12 @@ nav a.active {
     left: 0;
     right: 0;
     height: 120px;
-    background-color: rgba(10, 15, 20, 0.95);
+    background-color: rgba(20, 28, 36, 0.98); /* lighter background for better contrast */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     z-index: 999;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
@@ -689,15 +689,25 @@ nav a.active {
   }
   
   .sticky-topbar nav a {
-    color: #aee1e1;
+    color: #e0f7ff; /* brighter text */
     margin-left: 1.2rem;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
   }
   
   .sticky-topbar nav a:hover {
-    color: #8ff3ff;
+    color: #ffffff;
+    background: rgba(143, 243, 255, 0.2);
+  }
+  
+  .sticky-topbar nav a.active {
+    color: #0a0f1a;
+    background: #8ff3ff;
+    font-weight: 700;
+    box-shadow: 0 0 12px rgba(143, 243, 255, 0.3);
   }
   
   .sticky-logo {
@@ -705,5 +715,6 @@ nav a.active {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 12px rgba(143, 243, 255, 0.25);
   }
   
