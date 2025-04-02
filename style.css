@@ -90,10 +90,10 @@
   
   .site-branding .logo {
     position: absolute;
-    top: -45px;         /* adjust vertical position */
-    left: -45px;        /* adjust horizontal position */
-    width: 200px;        /* 🔧 control size here */
-    height: 200px;
+    top: -45px;         
+    left: -45px;       
+    width: 128px;        
+    height: 128px;
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
