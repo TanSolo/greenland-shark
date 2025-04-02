@@ -102,13 +102,15 @@
   
 
   .logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 96px;   /* 1.5x typical ~64px */
+    height: 96px;
     border-radius: 50%;
-    box-shadow: 0 0 12px rgba(143, 243, 255, 0.15);
+    box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
+    z-index: 10;
   }
-  
   
   /* Main content */
   main {
