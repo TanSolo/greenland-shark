@@ -105,7 +105,7 @@
     position: absolute;
     top: -45px;
     left: -45px;
-    width: 128px;   /* 1.5x typical ~64px */
+    width: 128px;   
     height: 128px;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
