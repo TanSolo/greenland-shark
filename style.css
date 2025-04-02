@@ -103,10 +103,10 @@
 
   .logo {
     position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 96px;   /* 1.5x typical ~64px */
-    height: 96px;
+    top: -45px;
+    left: -45px;
+    width: 128px;   /* 1.5x typical ~64px */
+    height: 128px;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
     z-index: 10;
