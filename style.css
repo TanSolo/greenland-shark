@@ -717,4 +717,25 @@ nav a.active {
     object-fit: cover;
     box-shadow: 0 0 12px rgba(143, 243, 255, 0.25);
   }
+  .toggle-btn {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #8ff3ff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    color: #b4f7ff;
+  }
+  
+  .hidden {
+    display: none;
+  }
   

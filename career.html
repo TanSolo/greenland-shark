@@ -50,24 +50,45 @@
       </section>
 
       <section class="about" data-animate>
-        <h3>Projects</h3>
-        <ul class="career-list">
-          <li>
-            <strong>🧠 Neural Synth</strong> — A virtual synth powered by neural nets. <br>
-            <a href="#">View project</a>
-          </li>
-          <li>
-            <strong>📡 Live Audio Streamer</strong> — Low-latency streaming over WebRTC.<br>
-            <a href="#">View project</a>
-          </li>
-        </ul>
-      </section>
+        <h3>Certificates</h3>
+      
+        <div class="cert-category">
+          <button class="toggle-btn">🤖 AI & Machine Learning</button>
+          <ul class="career-list hidden">
+            <li><a href="./assets/certificates/Coursera R19RSJBXXHMA.pdf" target="_blank">IBM - Generative AI: Prompt Engineering Basics</a></li>
+            <li><a href="./assets/certificates/Coursera 9ZUV71OTK7MY.pdf" target="_blank">IBM - Generative AI: Introduction and Applications</a></li>
+            <li><a href="./assets/certificates/Coursera 9B4CUFD9LGLJ.pdf" target="_blank">IBM - Introduction to Artificial Intelligence (AI)</a></li>
+            <li><a href="./assets/certificates/Coursera 9B4CUFD9LGLJ.pdf" target="_blank">Cisco - Introduction to Modern AI</a></li>
+          </ul>
+        </div>
+      
+        <div class="cert-category">
+          <button class="toggle-btn">🖥 Full Stack</button>
+          <ul class="career-list hidden">
+            <li><a href="./assets/certificates/Coursera JTVU22PEWNTM.pdf" target="_blank">University of Michigan - Introduction to HTML5</a></li>
+          </ul>
+        </div>
+      
+        <div class="cert-category">
+          <button class="toggle-btn">💻 Programming</button>
+          <ul class="career-list hidden">
+            <li><a href="./assets/certificates/certificate_python_2.pdf" target="_blank">Cisco - Python Essentials 2</a></li>
+            <li><a href="./assets/certificates/certificate_python.pdf" target="_blank">Cisco - Python Essentials 1</a></li>
+          </ul>
+        </div>
+      
+        <div class="cert-category">
+          <button class="toggle-btn">🌐 Other</button>
+          <ul class="career-list hidden">
+            <li><a href="./assets/certificates/certificate_python.pdf" target="_blank">MOOC - Open Educational Resources (OER) in Higher Education</a></li>
+          </ul>
+        </div>
+      </section>      
 
       <section class="about" data-animate>
-        <h3>Certificates</h3>
+        <h3>Projects</h3>
         <ul class="career-list">
-          <li>🎓 Deep Learning Specialization — Coursera</li>
-          <li>🛡 Cybersecurity Fundamentals — IBM</li>
+          <li>Coffee Automation Software</li>
         </ul>
       </section>
 
@@ -112,6 +133,14 @@
       } else {
         topbar.classList.remove('show');
       }
+    });
+  </script>  
+  <script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const list = button.nextElementSibling;
+        list.classList.toggle('hidden');
+      });
     });
   </script>  
 </body>
