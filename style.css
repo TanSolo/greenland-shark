@@ -7,11 +7,11 @@
   
   body {
     background-color: #0e1825;
-    background-image: url('images/greenland-shark-bg-1920px.png');
-    background-position: top center;
+    background-image: url('images/deep-sea-bg.png');
+    background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-attachment: scroll;
+    background-size: cover;
+    background-attachment: fixed; /* This makes the background stay still */
     color: #d6e4ec;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -19,6 +19,7 @@
     position: relative;
     min-height: 100vh;
   }
+  
   
   .background-overlay {
     position: fixed;
