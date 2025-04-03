@@ -1,24 +1,21 @@
-/* Reset and base styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  body {
+  html, body {
+    height: 100%;
     background-color: #0e1825;
     background-image: url('./images/deep-sea-bg.png');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed; /* This makes the background stay still */
-    color: #d6e4ec;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
+    color: #d6e4ec;
     line-height: 1.6;
-    padding: 2rem;
-    position: relative;
-    min-height: 100vh;
-  }
+  }  
   
   
   .background-overlay {
