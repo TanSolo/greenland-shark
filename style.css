@@ -17,7 +17,6 @@
     line-height: 1.6;
   }  
   
-  
   .background-overlay {
     position: fixed;
     top: 0;
@@ -29,12 +28,11 @@
     pointer-events: none;
   }
   
-  /* Frosted glass wrapper */
   .glass-container {
     background: rgba(10, 15, 20, 0.75);
     border-radius: 16px;
     padding: 2rem;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 4rem auto;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -43,8 +41,7 @@
     position: relative;
     animation: fadeSlide 0.7s ease-out;
   }
-  
-  /* Header */
+
   header {
     display: flex;
     justify-content: space-between;
@@ -62,7 +59,7 @@
     color: #aee1e1;
     letter-spacing: 0.5px;
   }
-  
+
   nav a {
     color: #9bbacb;
     text-decoration: none;
@@ -70,13 +67,18 @@
     transition: all 0.3s ease;
     font-weight: 500;
     text-shadow: 0 0 4px rgba(143, 243, 255, 0.15);
-  }
+    border-bottom: 2px solid transparent; /* Reserve space */
+  }  
   
-  nav a:hover,
-  nav a.active {
-    color: #8ff3ff;
-    text-shadow: 0 0 8px rgba(143, 243, 255, 0.4);
-    border-bottom: 2px solid #8ff3ff;
+nav a:hover,
+
+nav a.active {
+  color: #0a0f1a;
+  background: #8ff3ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(143, 243, 255, 0.4);
   }
   .site-branding {
     position: relative;
@@ -90,17 +92,16 @@
     position: absolute;
     top: -45px;         
     left: -45px;       
-    width: 128px;        
-    height: 128px;
+    width: clamp(64px, 10vw, 128px);
+    height: clamp(64px, 10vw, 128px);    
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 20px rgba(143, 243, 255, 0.2);
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
   }
   
-  /* Main content */
   main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 4rem auto;
     position: relative;
     z-index: 1;
@@ -109,7 +110,7 @@
   /* Intro section */
   .intro-card {
     background: rgba(20, 30, 40, 0.9);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 150, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -117,7 +118,6 @@
     transition: box-shadow 0.3s ease;
     line-height: 1.9;
     font-size: 1.1rem;
-    padding: 2.5rem;
   }
   
   .intro-card:hover {
@@ -131,7 +131,7 @@
   }
   
   .intro-card p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #b4cfe0;
   }
   
@@ -172,7 +172,7 @@
     background: #6ae0f0;
     transform: translateY(-2px);
     box-shadow: 0 0 15px rgba(143, 243, 255, 0.3);
-  }
+  }  
   
   /* Footer */
   footer {
@@ -182,12 +182,13 @@
     color: #5c6f7a;
     border-top: 1px solid #1e2a35;
     padding-top: 1rem;
+    padding: 1rem 1rem 0;
   }
   
   /* Dummy spacer */
   .spacer-section {
     margin-top: 5rem;
-    height: 500px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,98 +207,21 @@
       transform: translateY(0);
     }
   }
-
-/* Glowing underline for active nav link */
-nav a.active {
-  color: #0a0f1a;
-  background: #8ff3ff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
-  font-weight: 600;
-  box-shadow: 0 0 15px rgba(143, 243, 255, 0.4);
-}
   
   /* Scroll-fade animation */
   [data-animate] {
     opacity: 0;
     transform: translateY(20px) scale(0.98);
     transition: all 0.6s ease-out;
+    will-change: opacity, transform;
   }
   
   [data-animate].in-view {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
-
-  .blog-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 1rem;
-  }
+C
   
-  .blog-list li {
-    margin-bottom: 1rem;
-  }
-  
-  .blog-list a {
-    color: #8ff3ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, text-shadow 0.3s;
-  }
-  
-  .blog-list a:hover {
-    color: #b4f7ff;
-    text-shadow: 0 0 6px rgba(143, 243, 255, 0.4);
-  }
-  .blog-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-    justify-content: center;
-  }
-  
-  .blog-card {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    background: rgba(30, 40, 50, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s, box-shadow 0.3s;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 20px rgba(143, 243, 255, 0.05);
-  }
-  
-  .blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(143, 243, 255, 0.2);
-  }
-  
-  .blog-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .blog-card-text {
-    padding: 1rem 1.2rem;
-  }
-  
-  .blog-card-text h3 {
-    color: #cceeff;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .blog-card-text p {
-    color: #a4c2d4;
-    font-size: 1rem;
-  }
   .intro-card p {
     font-size: 1.1rem;
     color: #b4cfe0;
@@ -333,27 +257,21 @@ nav a.active {
     color: #b4f7ff;
     text-shadow: 0 0 6px rgba(143, 243, 255, 0.4);
   }
-/* Reset and base styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+
+  @media (max-width: 768px) {
+    .blog-card-text {
+      padding: 0.5rem;
+    }
   
-  /* Frosted glass wrapper */
-  .glass-container {
-    background: rgba(10, 15, 20, 0.75);
-    border-radius: 16px;
-    padding: 2rem;
-    max-width: 960px;
-    margin: 4rem auto;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-    position: relative;
-    animation: fadeSlide 0.7s ease-out;
-  }
+    .blog-card-text h3 {
+      font-size: 0.9rem;
+    }
+  
+    .blog-card-text p {
+      font-size: 0.75rem;
+    }
+  }  
+  
   
   /* Header */
   header {
@@ -374,21 +292,6 @@ nav a.active {
     letter-spacing: 0.5px;
   }
   
-  nav a {
-    color: #9bbacb;
-    text-decoration: none;
-    margin-left: 1rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    text-shadow: 0 0 4px rgba(143, 243, 255, 0.15);
-  }
-  
-  nav a:hover,
-  nav a.active {
-    color: #8ff3ff;
-    text-shadow: 0 0 8px rgba(143, 243, 255, 0.4);
-    border-bottom: 2px solid #8ff3ff;
-  }
   .site-branding {
     display: flex;
     align-items: center;
@@ -403,27 +306,25 @@ nav a.active {
     box-shadow: 0 0 12px rgba(143, 243, 255, 0.15);
   }
   
+  @media (max-width: 768px) {
+    .glass-container {
+      padding: 1.2rem;
+    }
   
-  /* Main content */
-  main {
-    max-width: 900px;
-    margin: 4rem auto;
-    position: relative;
-    z-index: 1;
-  }
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
   
-  /* Intro section */
-  .intro-card {
-    background: rgba(20, 30, 40, 0.9);
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 150, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(4px);
-    transition: box-shadow 0.3s ease;
-    line-height: 1.9;
-    font-size: 1.1rem;
-    padding: 2.5rem;
+    .logo {
+      width: 36px;
+      height: 36px;
+    }
+  
+    nav a {
+      margin-left: 0.5rem;
+    }
   }
   
   .intro-card:hover {
@@ -512,16 +413,6 @@ nav a.active {
       transform: translateY(0);
     }
   }
-
-/* Glowing underline for active nav link */
-nav a.active {
-  color: #0a0f1a;
-  background: #8ff3ff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
-  font-weight: 600;
-  box-shadow: 0 0 15px rgba(143, 243, 255, 0.4);
-}
   
   /* Scroll-fade animation */
   [data-animate] {
@@ -556,32 +447,25 @@ nav a.active {
     color: #b4f7ff;
     text-shadow: 0 0 6px rgba(143, 243, 255, 0.4);
   }
-  .blog-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-    justify-content: center;
-  }
-  
+
   .blog-card {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    background: rgba(30, 40, 50, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s, box-shadow 0.3s;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 20px rgba(143, 243, 255, 0.05);
-  }
-  
+  }  
   .blog-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 0 25px rgba(143, 243, 255, 0.2);
+  }
+
+  .blog-card:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
   }
   
   .blog-card img {
@@ -591,6 +475,7 @@ nav a.active {
   }
   
   .blog-card-text {
+    width: 100%;
     padding: 1rem 1.2rem;
   }
   
@@ -598,12 +483,16 @@ nav a.active {
     color: #cceeff;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
   
+
   .blog-card-text p {
     color: #a4c2d4;
     font-size: 1rem;
+    width: 100%;
   }
+
   .intro-card p {
     font-size: 1.1rem;
     color: #b4cfe0;
@@ -616,6 +505,7 @@ nav a.active {
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(143, 243, 255, 0.05);
   }
+  
   .career-list {
     list-style: none;
     padding-left: 0;
@@ -644,8 +534,8 @@ nav a.active {
     top: 0;
     left: 0;
     right: 0;
-    height: 120px;
-    background-color: rgba(20, 28, 36, 0.98); /* lighter background for better contrast */
+    height: 100px;
+    background-color: rgba(20, 28, 36, 0.95);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -653,15 +543,19 @@ nav a.active {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     z-index: 999;
     transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
   }
   
   .sticky-topbar.show {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .sticky-topbar nav a {
-    color: #e0f7ff; /* brighter text */
+    color: #e0f7ff;
     margin-left: 1.2rem;
     text-decoration: none;
     font-weight: 600;
@@ -683,12 +577,13 @@ nav a.active {
   }
   
   .sticky-logo {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 12px rgba(143, 243, 255, 0.25);
+    box-shadow: 0 0 10px rgba(143, 243, 255, 0.2);
   }
+  
   .toggle-btn {
     display: block;
     width: 100%;
@@ -733,4 +628,6 @@ nav a.active {
     width: 100%;
     height: 100%;
   }
+  
+
   
