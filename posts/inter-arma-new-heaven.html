@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Blog | Greenland Shark</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon block -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-96x96-1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-96x96-1.png">
+    <link rel="manifest" href="../favicons/images/site1.webmanifest">
+    <link rel="mask-icon" href="../favicons/images/favicon1.svg" color="#0a0f1a">
+    <link rel="shortcut icon" href="../favicons/images/favicon1.ico">
+    <meta name="apple-mobile-web-app-title" content="Greenland Shark">
+    <meta name="application-name" content="Greenland Shark">
+    <meta name="msapplication-TileColor" content="#0a0f1a">
+    <meta name="theme-color" content="#0a0f1a">
+  </head> 
+  <body>
+    <div class="glass-container">
+      <header data-animate>
+        <div class="site-branding">
+          <img src="../images/logo.png" alt="Greenland Shark logo" class="logo" />
+          <h1>Greenland Shark</h1>
+        </div>          
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../career.html">Career</a>
+            <a href="../blog.html" class="active">Blog</a>
+        </nav>
+      </header>
+      
+
+      <main>
+        <article class="intro-card" data-animate>
+          <h2>Inter Arma – New Heaven</h2>
+  
+            <p>Around five years ago, Inter Arma's music entered my life with Sulphur English. From the very first moment, I fell in love with these guys. 
+                Their massive, thick, and powerful sound is nothing short of astonishing. Founding member and drummer T.J. Childers' riff-writing was phenomenal. 
+                Many of the riffs carried a doom-death metal essence, reminiscent of bands like Incantation and Autopsy. However, as I delved deeper into their music, 
+                I realized they felt more like a blend of Black Sabbath and Morbid Angel—two of my all-time favourite bands.
+            </p>
+
+            <img src="../images/" alt="inter arma band photo" class="band-photo">
+
+
+          <hr>
+          <p><strong>Standouts: New Heaven, Violet Seizures, Forest Service Road Blues</strong></p>
+          <p><strong>Rating: 8/10</strong></p>
+        </article>
+      </main>
+
+      <footer data-animate>
+        <p>&copy; 2025 Greenland Shark. <em>Deep cuts from deeper waters.</em></p>
+      </footer>
+    </div>
+    <div class="sticky-topbar">
+      <img src="../images/logo.png" alt="Greenland Shark logo" class="sticky-logo" />
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../career.html">Career</a>
+        <a href="blog.html" class="active">Blog</a>
+      </nav>
+    </div>
+    
+
+    <div class="background-overlay"></div>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
+    <script>
+      const topbar = document.querySelector('.sticky-topbar');
+    
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          topbar.classList.add('show');
+        } else {
+          topbar.classList.remove('show');
+        }
+      });
+    </script>    
+  </body>
+</html>
