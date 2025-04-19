@@ -635,21 +635,23 @@ C
       background-color: #0e1825; /* fallback color */
     }
   }
-  
-.video-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 0.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(143, 243, 255, 0.08);
-  overflow: hidden;
-}
 
-.video-container iframe {
-  width: 100%;
-  height: 315px; /* You can reduce this if you want a shorter player */
-  border: none;
-}
+  .video-container {
+    max-width: 600px; /* or your preferred size */
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden; /* This is key to keep the iframe corners clipped */
+    box-shadow: 0 0 12px rgba(143, 243, 255, 0.08);
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 300px; /* or whatever height fits best */
+    display: block;
+    border: none;
+    border-radius: 0; /* Prevent iframe from having its own corners */
+  }
+  
 
   
 
