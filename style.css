@@ -509,7 +509,7 @@ C
     font-size: 0.9rem;
     color: #a4c2d4;
   }
-  
+
   .blog-card:visited,
 .blog-card:hover,
 .blog-card:active {
@@ -635,23 +635,22 @@ C
       background-color: #0e1825; /* fallback color */
     }
   }
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    margin-top: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(143, 243, 255, 0.1);
-  }
   
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.video-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(143, 243, 255, 0.08);
+  overflow: hidden;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 315px; /* You can reduce this if you want a shorter player */
+  border: none;
+}
+
   
 
   
