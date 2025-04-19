@@ -19,101 +19,111 @@
     <meta name="msapplication-TileColor" content="#0a0f1a">
     <meta name="theme-color" content="#0a0f1a">
   </head>  
-<body>
-  <div class="glass-container">
-    <header data-animate>
-      <div class="site-branding">
-        <img src="images/logo.png" alt="Greenland Shark logo" class="logo" />
-        <h1>Greenland Shark</h1>
-      </div>          
+  <body>
+    <div class="glass-container">
+      <header data-animate>
+        <div class="site-branding">
+          <img src="images/logo.png" alt="Greenland Shark logo" class="logo" />
+          <h1>Greenland Shark</h1>
+        </div>          
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="career.html">Career</a>
+          <a href="blog.html" class="active">Blog</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="intro-card" data-animate>
+          <h2>Blog</h2>
+          <p>
+            Thoughts, reviews, short stories, and fragments from the deep.
+          </p>
+        </section>
+
+        <!-- Updated vertical blog layout -->
+        <section class="blog-list about" data-animate>
+          <a href="posts/lonely-people-with-power.html" class="blog-card">
+            <img src="./images/lonely-people-with-power/600x600bb.jpg" alt="Deafheaven – Lonely People With Power" />
+            <div class="blog-card-text">
+              <h3>Deafheaven – Lonely People With Power</h3>
+              <p class="subheading">The power that comes from accepting loneliness, and the depression that comes with that power</p>
+            </div>
+          <a href="posts/inter-arma-new-heaven.html" class="blog-card">
+            <img src="./images/inter-arma/600x600bb.jpg" alt="Inter Arma – New Heaven" />
+            <div class="blog-card-text">
+              <h3>Inter Arma – New Heaven</h3>
+              <p class="subheading">A chaotic yet focused journey into modern sludge metal</p>
+            </div>
+          </a>
+          <a href="posts/panzerfaust4.html" class="blog-card">
+            <img src="./images/panzerfaust4/600x600bb.jpg" alt="Panzarfaust – The Suns of Perdition – Chapter IV: To Shadow Zion" />
+            <div class="blog-card-text">
+              <h3>Panzarfaust – The Suns of Perdition – Chapter IV: To Shadow Zion</h3>
+              <p class="subheading">Black metal with political fire and philosophical weight</p>
+            </div>
+          </a>
+          <a href="posts/ulcerate-cttog.html" class="blog-card">
+            <img src="./images/ulcerate-cttog/600x600bb.jpg" alt="Ulcerate – Cutting the Throat of God" />
+            <div class="blog-card-text">
+              <h3>Ulcerate – Cutting the Throat of God</h3>
+              <p class="subheading">Bleak, technical, and emotionally punishing death metal</p>
+            </div>
+          </a>
+          <a href="posts/emperor-of-sand.html" class="blog-card">
+            <img src="./images/mastodon-emperor_of_sand/cover.jpg" alt="Mastodon – Emperor of Sand" />
+            <div class="blog-card-text">
+              <h3>Mastodon – Emperor of Sand</h3>
+              <p class="subheading">A poignant concept album of time, loss, and resilience</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="spacer-section" data-animate>
+          <p>More writing coming soon...</p>
+        </section>
+      </main>
+
+      <footer data-animate>
+        <p>&copy; 2025 Greenland Shark. <em>Still waters write deep stories.</em></p>
+      </footer>
+    </div>
+
+    <div class="sticky-topbar">
+      <img src="./images/logo.png" alt="Greenland Shark logo" class="sticky-logo" />
       <nav>
         <a href="index.html">Home</a>
         <a href="career.html">Career</a>
         <a href="blog.html" class="active">Blog</a>
       </nav>
-    </header>
+    </div>  
 
-    <main>
-      <section class="intro-card" data-animate>
-        <h2>Blog</h2>
-        <p>
-          Thoughts, reviews, short stories, and fragments from the deep.
-        </p>
-      </section>
+    <div class="background-overlay"></div>
 
-      
-      <section class="blog-grid about" data-animate>
-        <a href="posts/inter-arma-new-heaven.html" class="blog-card">
-          <img src="./images/inter-arma/600x600bb.jpg" alt="Inter Arma – New Heaven" />
-          <div class="blog-card-text">
-            <h3>Inter Arma – New Heaven</h3>
-          </div>
-        </a>
-        <a href="posts/panzerfaust4.html" class="blog-card">
-          <img src="./images/panzerfaust4/600x600bb.jpg" alt="Panzarfaust – The Suns of Perdition – Chapter IV: To Shadow Zion" />
-          <div class="blog-card-text">
-            <h3>Panzarfaust – The Suns of Perdition – Chapter IV: To Shadow Zion</h3>
-          </div>
-        </a>
-        <a href="posts/ulcerate-cttog.html" class="blog-card">
-          <img src="./images/ulcerate-cttog/600x600bb.jpg" alt="Ulcerate – Cutting the Throat of God" />
-          <div class="blog-card-text">
-            <h3>Ulcerate – Cutting the Throat of God</h3>
-          </div>
-        </a>
-        <a href="posts/emperor-of-sand.html" class="blog-card">
-          <img src="./images/mastodon-emperor_of_sand/cover.jpg" alt="Mastodon – Emperor of Sand" />
-          <div class="blog-card-text">
-            <h3>Mastodon – Emperor of Sand</h3>
-          </div>
-        </a>
-      </section>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
-      <section class="spacer-section" data-animate>
-        <p>More writing coming soon...</p>
-      </section>
-    </main>
-
-    <footer data-animate>
-      <p>&copy; 2025 Greenland Shark. <em>Still waters write deep stories.</em></p>
-    </footer>
-  </div>
-
-  <div class="sticky-topbar">
-    <img src="./images/logo.png" alt="Greenland Shark logo" class="sticky-logo" />
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="career.html">Career</a>
-        <a href="blog.html" class="active">Blog</a>
-    </nav>
-  </div>  
-
-  <div class="background-overlay"></div>
-
-  <script>
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  </script>
-  <script>
-    const topbar = document.querySelector('.sticky-topbar');
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        topbar.classList.add('show');
-      } else {
-        topbar.classList.remove('show');
-      }
-    });
-  </script>  
-</body>
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
+    <script>
+      const topbar = document.querySelector('.sticky-topbar');
+    
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          topbar.classList.add('show');
+        } else {
+          topbar.classList.remove('show');
+        }
+      });
+    </script>  
+  </body>
 </html>
