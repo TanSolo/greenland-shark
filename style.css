@@ -522,6 +522,7 @@ C
     color: #b4cfe0;
     margin-bottom: 1.2rem; /* Add spacing between paragraphs */
   }
+
   .intro-card img {
     display: block;
     margin: 2rem auto;
@@ -570,7 +571,10 @@ C
     transition: transform 0.3s ease;
     pointer-events: none;
     opacity: 0;
-  }
+  
+    /* 💡 ADD THIS */
+    overflow: visible; 
+  }  
   
   .sticky-topbar.show {
     transform: translateY(0);
@@ -579,6 +583,8 @@ C
   }
   
   .sticky-topbar nav a {
+    position: relative; /* ✨ establishes stacking context */
+    z-index: 1;          /* ensures it's on top of other elements inside the bar */
     color: #e0f7ff;
     margin-left: 1.2rem;
     text-decoration: none;
@@ -589,8 +595,10 @@ C
   }
   
   .sticky-topbar nav a:hover {
-    color: #ffffff;
-    background: rgba(143, 243, 255, 0.2);
+    color: #0a0f1a;
+    background: #6ee7d2; /* More green-turquoise */
+    font-weight: 700;
+    box-shadow: 0 0 14px 5px rgba(110, 231, 210, 0.4); /* match tone */
   }
   
   .sticky-topbar nav a.active {
